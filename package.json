@@ -56,6 +56,9 @@
     "build": "docker build -t account-lookup-service:local -f ./Dockerfile .",
     "build:api": "docker build -t account-lookup-service-api:local -f ./api.Dockerfile .",
     "build:admin": "docker build -t account-lookup-service-admin:local -f ./admin.Dockerfile .",
+    "build:openapi": "npm run build:openapi-interface && npm run build:openapi-admin",
+    "build:openapi-interface": "swagger-cli bundle -o ./src/interface/api-swagger.yaml -t yaml ./src/interface/api-swagger-template.yaml && swagger-cli validate ./src/interface/api-swagger.yaml",
+    "build:openapi-admin": "swagger-cli bundle -o ./src/interface/admin-swagger.yaml -t yaml ./src/interface/admin-swagger-template.yaml && swagger-cli validate ./src/interface/admin-swagger.yaml",
     "run": "docker run -p 3000:3000 --rm --link db:mysql central-directory:local",
     "package-lock": "docker run --rm -it central-directory:local cat package-lock.json > package-lock.json",
     "generate-docs": "jsdoc -c jsdoc.json",
@@ -94,6 +97,7 @@
     "rc": "1.2.8"
   },
   "devDependencies": {
+    "@mojaloop/api-snippets": "^11.4.4",
     "@types/jest": "26.0.14",
     "eslint": "7.10.0",
     "eslint-plugin-jest": "24.0.2",
@@ -110,6 +114,7 @@
     "request-promise-native": "1.0.9",
     "sinon": "9.1.0",
     "standard": "14.3.4",
+    "swagger-cli": "^4.0.4",
     "swagmock": "1.0.0"
   },
   "generator-swaggerize": {
