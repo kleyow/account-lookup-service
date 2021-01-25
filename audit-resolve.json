@@ -70,8 +70,28 @@
     },
     "1500|@mojaloop/central-services-shared>widdershins>yargs>yargs-parser": {
       "decision": "ignore",
-      "madeAt": 1607695368024,
-      "expiresAt": 1608300137965
+      "madeAt": 1611591296525,
+      "expiresAt": 1614183284824
+    },
+    "1594|@mojaloop/central-services-shared>axios": {
+      "decision": "ignore",
+      "madeAt": 1611591291030,
+      "expiresAt": 1614183284824
+    },
+    "1595|@mojaloop/central-services-health>@mojaloop/central-services-shared>widdershins>urijs": {
+      "decision": "ignore",
+      "madeAt": 1611591294355,
+      "expiresAt": 1614183284824
+    },
+    "1595|@mojaloop/central-services-shared>widdershins>urijs": {
+      "decision": "ignore",
+      "madeAt": 1611591294355,
+      "expiresAt": 1614183284824
+    },
+    "1500|@mojaloop/central-services-health>@mojaloop/central-services-shared>widdershins>yargs>yargs-parser": {
+      "decision": "ignore",
+      "madeAt": 1611591296525,
+      "expiresAt": 1614183284824
     }
   },
   "rules": {},
